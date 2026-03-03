@@ -1,0 +1,16 @@
+{
+    "VENDOR_ID": "0x1d50",
+    "PRODUCT_ID": "0x615e",
+    "NEAR_DISTANCE": 1.0,
+    "FAR_DISTANCE": 100.0,
+    "NEAR_TRANS_SENSITIVITY": 0.1,
+    "FAR_TRANS_SENSITIVITY": 1.33,
+    "ROTATION_SENSITIVITY": 0.123,
+    "MOTION_MODE": 1,
+    "SCALE_X": 1.0,
+    "SCALE_Y": 1.0,
+    "SCALE_Z": 1.0,
+    "SCALE_RX": 1.0,
+    "SCALE_RY": 1.0,
+    "SCALE_RZ": 1.0
+}

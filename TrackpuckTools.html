@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TrackpuckTools</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="trackpuckPalette" class="container">
+        <div class="content">
+
+            <div class="group">
+                <div class="config-row">
+                    <span>
+                        Motion Mode:
+                        <span class="help-icon" title="Orbital: Moves the target point. Navigating: Moves the camera directly.">?</span>
+                    </span>
+                    <select id="motionModeSelect" class="mode-select">
+                        <option value="1">Orbital</option>
+                        <option value="2">Navigating</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="group" style="margin-top: 10px;">
+                <div class="config-row">
+                    <span>
+                        Translation Sensitivity:
+                        <span class="help-icon" title="Translation speed scales with camera distance. At close range (Near Distance), movement is slower. At far range (Far Distance), movement is faster. Interpolates linearly between Near Sensitivity and Far Sensitivity.">?</span>
+                    </span>
+                    <input type="number" class="telemetry-input" id="dynTransSensitivity" autocomplete="off" step="0.001" readonly>
+                </div>
+            </div>
+            
+            <div class="group" style="margin-top: 10px;">
+                <div class="config-row">
+                    <span>Near Distance (cm):</span>
+                    <input type="number" class="telemetry-input editable" id="nearDistance" autocomplete="off" step="0.1">
+                </div>
+                <div class="config-row" style="margin-top: 4px;">
+                    <span>Near Sensitivity:</span>
+                    <input type="number" class="telemetry-input editable" id="nearSensitivity" autocomplete="off" step="0.001">
+                </div>
+            </div>
+            
+            <div class="group" style="margin-top: 10px;">
+                <div class="config-row">
+                    <span>Far Distance (cm):</span>
+                    <input type="number" class="telemetry-input editable" id="farDistance" autocomplete="off" step="0.1">
+                </div>
+                <div class="config-row" style="margin-top: 4px;">
+                    <span>Far Sensitivity:</span>
+                    <input type="number" class="telemetry-input editable" id="farSensitivity" autocomplete="off" step="0.001">
+                </div>
+            </div>
+            
+            <div class="group" style="margin-top: 10px;">
+                <div class="config-row">
+                    <span>Rotation Sensitivity:</span>
+                    <input type="number" class="telemetry-input editable" id="rotationSensitivity" autocomplete="off" step="0.001">
+                </div>
+            </div>
+                        
+            <div class="group" style="margin-top: 10px;">
+                <div class="label-row">
+                    <span>
+                        Axis Scales:
+                        <span class="help-icon" title="Multipliers for each axis. X/Y/Z for translation, RX/RY/RZ for rotation. Negative values invert the axis direction. Default is 1.0 (no scaling).">?</span>
+                    </span>
+                </div>
+                <div class="config-row">
+                    <span class="axis-label">X:</span>
+                    <input type="number" class="telemetry-input editable" id="scaleX" autocomplete="off" step="0.1">
+                    <span class="axis-label">Pitch:</span>
+                    <input type="number" class="telemetry-input editable" id="scaleRX" autocomplete="off" step="0.1">
+                </div>
+                <div class="config-row" style="margin-top: 4px;">
+                    <span class="axis-label">Y:</span>
+                    <input type="number" class="telemetry-input editable" id="scaleY" autocomplete="off" step="0.1">
+                    <span class="axis-label">Roll:</span>
+                    <input type="number" class="telemetry-input editable" id="scaleRY" autocomplete="off" step="0.1">
+                </div>
+                <div class="config-row" style="margin-top: 4px;">
+                    <span class="axis-label">Z:</span>
+                    <input type="number" class="telemetry-input editable" id="scaleZ" autocomplete="off" step="0.1">
+                    <span class="axis-label">Yaw:</span>
+                    <input type="number" class="telemetry-input editable" id="scaleRZ" autocomplete="off" step="0.1">
+                </div>
+            </div>
+
+            <div class="group">
+                <div class="button-row" style="margin-bottom: 8px;">
+                    <button id="savePrefBtn" style="flex: 1; margin-right: 4px;">Save Preferences</button>
+                    <button id="loadPrefBtn" style="flex: 1; margin-left: 4px;">Load Preferences</button>
+                </div>
+                <button id="resetAllBtn" style="width: 100%;">Reset All</button>
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <div class="container">
+                <div class="button-group" style="margin-left: 10px;">
+                    <button id="activateBtn"><span class="led"></span>Activate</button>
+                    <button id="deactivateBtn"><span class="led active"></span>Deactivate</button>
+                    <div class="placeholder"></div>
+                    <button id="closeBtn">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="TrackpuckTools.js"></script>
+</body>
+
+</html>

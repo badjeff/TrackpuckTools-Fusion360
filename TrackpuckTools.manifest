@@ -1,0 +1,12 @@
+{
+    "autodeskProduct": "Fusion360",
+    "type": "addin",
+    "id": "TrackpuckTools",
+    "author": "badjeff",
+    "description": {
+        "": "6DoF HID Trackpuck Integration Tools"
+    },
+    "version": "0.1.0",
+    "runOnStartup": false,
+    "supportedOS": "windows|mac"
+}

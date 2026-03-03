@@ -1,0 +1,5 @@
+__pycache__
+__extracted__
+*.bak
+hidapi
+.DS_Store

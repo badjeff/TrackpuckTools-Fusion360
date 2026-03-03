@@ -1,0 +1,418 @@
+/* =========================
+   VARIABLES & PALETTE
+   ========================= */
+:root {
+    --rad-sm: 4px;
+    --rad-m: 6px;
+    --rad-l: 8px;
+    --rad-xl: 12px;
+
+    --black-100:   #0000000d;
+    --black-200:   #0000001a;
+    --black-300:   #00000033;
+    --black-400:   #0000004d;
+    --black-500:   #00000080;
+    --black-600:   #000000cc;
+    --black-700:   #000000d9;
+    --black-800:   #000000e5;
+    --black-900:   #000000f2;
+    --black-1000:  #000000;
+
+    --grey-100:    #f5f5f5;
+    --grey-200:    #e6e6e6;
+    --grey-300:    #d9d9d9;
+    --grey-400:    #b3b3b3;
+    --grey-500:    #757575;
+    --grey-600:    #444444;
+    --grey-700:    #383838;
+    --grey-800:    #2c2c2c;
+    --grey-900:    #1e1e1e;
+    --grey-1000:   #111111;
+
+    --white-100:   #ffffff0d;
+    --white-200:   #ffffff1a;
+    --white-300:   #ffffff33;
+    --white-400:   #ffffff66;
+    --white-500:   #ffffffb2;
+    --white-600:   #ffffffcc;
+    --white-700:   #ffffffd9;
+    --white-800:   #ffffffe5;
+    --white-900:   #fffffff2;
+    --white-1000:  #ffffff;
+
+    --primary-autodeskBlue-100: #cdeaf7;
+    --primary-autodeskBlue-200: #9bd5ef;
+    --primary-autodeskBlue-300: #6ac0e7;
+    --primary-autodeskBlue-400: #38abdf;
+    --primary-autodeskBlue-500: #0696d7;
+    --primary-autodeskBlue-600: #007fc6;
+    --primary-autodeskBlue-700: #006eaf;
+    --primary-autodeskBlue-800: #074b78;
+    --primary-autodeskBlue-900: #0a324d;
+    --primary-charcoal-100: #eeeeee;
+    --primary-charcoal-200: #dcdcdc;
+    --primary-charcoal-300: #cccccc;
+    --primary-charcoal-400: #bbbbbb;
+    --primary-charcoal-500: #999999;
+    --primary-charcoal-600: #808080;
+    --primary-charcoal-700: #666666;
+    --primary-charcoal-800: #4d4d4d;
+    --primary-charcoal-900: #3c3c3c;
+
+    --secondary-darkBlue-100: #e1ebf7;
+    --secondary-darkBlue-200: #bcd3ee;
+    --secondary-darkBlue-300: #8babdc;
+    --secondary-darkBlue-400: #5f8bcb;
+    --secondary-darkBlue-500: #3970b9;
+    --secondary-darkBlue-600: #1858a8;
+    --secondary-darkBlue-700: #064285;
+    --secondary-darkBlue-800: #003163;
+    --secondary-darkBlue-900: #0c2c54;
+    --secondary-green-100: #e7f2d9;
+    --secondary-green-200: #cfe4b3;
+    --secondary-green-300: #b7d78c;
+    --secondary-green-400: #9fc966;
+    --secondary-green-500: #87b340;
+    --secondary-green-600: #6a9728;
+    --secondary-green-700: #507b16;
+    --secondary-green-800: #385e08;
+    --secondary-green-900: #234200;
+    --secondary-red-100: #faeded;
+    --secondary-red-200: #f7d6d6;
+    --secondary-red-300: #f9b4b4;
+    --secondary-red-400: #f48686;
+    --secondary-red-500: #eb5555;
+    --secondary-red-600: #dd2222;
+    --secondary-red-700: #af1b1b;
+    --secondary-red-800: #800f0f;
+    --secondary-red-900: #520404;
+    --secondary-yellowOrange-100: #feecd1;
+    --secondary-yellowOrange-200: #fddaa4;
+    --secondary-yellowOrange-300: #fcc776;
+    --secondary-yellowOrange-400: #fbb549;
+    --secondary-yellowOrange-500: #faa21b;
+    --secondary-yellowOrange-600: #ed8d16;
+    --secondary-yellowOrange-700: #d9730b;
+    --secondary-yellowOrange-800: #bf5808;
+    --secondary-yellowOrange-900: #8c3401;
+
+    --tertiary-slate-100: #e9f0f7;
+    --tertiary-slate-200: #dce7f3;
+    --tertiary-slate-300: #c1cedc;
+    --tertiary-slate-400: #a7bacf;
+    --tertiary-slate-500: #7993b0;
+    --tertiary-slate-600: #6784a6;
+    --tertiary-slate-700: #4b6b8f;
+    --tertiary-slate-800: #354d67;
+    --tertiary-slate-900: #2c3e53;
+
+    --surface-lightGray-100: #ffffff;
+    --surface-lightGray-200: #f5f5f5;
+    --surface-lightGray-250: #eeeeee;
+    --surface-lightGray-300: #d9d9d9;
+    --surface-lightGray-350: #cccccc;
+    --surface-darkBlue-100: #4a5d75;
+    --surface-darkBlue-200: #3d4e65;
+    --surface-darkBlue-250: #2C3440;
+    --surface-darkBlue-300: #2C3440;
+    --surface-darkBlue-350: #454F61;
+    --surface-darkGray-100: #535353;
+    --surface-darkGray-200: #474747;
+    --surface-darkGray-250: #373737;
+    --surface-darkGray-300: #2a2a2a;
+    --surface-darkGray-350: #202020;
+
+    --success: #87b340;
+    --warning: #faa21b;
+    --error: #ec4a41;
+
+    --color-body: var(--surface-lightGray-200);
+    --color-group: var(--surface-lightGray-250);
+    --color-group-transparent: var(--surface-lightGray-250);
+    --color-background-default: var(--surface-lightGray-200);
+    --color-text-default: var(--grey-800);
+    --color-border-default: var(--grey-400);
+    --color-background-hover: var(--grey-300);
+    --color-text-hover: var(--grey-800);
+    --color-border-hover: var(--grey-700);
+    --color-background-active: var(--grey-500);
+    --color-text-active: var(--white-1000);
+    --color-border-active: var(--grey-700);
+    --color-background-disabled: var(--grey-100);
+    --color-text-disabled: var(--grey-500);
+    --color-border-disabled: var(--grey-300);
+    --color-text-label: var(--grey-700);
+    --color-text-summary: var(--grey-500);
+    --color-graphic-background: var(--surface-lightGray-300);
+    --color-graphic-background-hover: var(--surface-lightGray-350);
+    --color-graphic-background-disabled: var(--surface-lightGray-350);
+    --color-graphic-foreground: var(--surface-lightGray-200);
+    --color-graphic-foreground-disabled: var(--surface-lightGray-250);
+    --color-highlight: var(--primary-autodeskBlue-300);
+    --color-accent: var(--grey-700);
+    --color-input-background: #ffffff;
+}
+
+.dark-mode {
+    --color-body: var(--surface-darkBlue-350);
+    --color-group: var(--surface-darkBlue-300);
+    --color-group-transparent: var(--surface-darkBlue-300);
+    --color-background-default: var(--surface-darkBlue-350);
+    --color-text-default: var(--white-1000);
+    --color-border-default: var(--grey-400);
+    --color-background-hover: var(--surface-darkBlue-250);
+    --color-text-hover: var(--white-1000);
+    --color-border-hover: var(--white-500);
+    --color-background-active: var(--surface-darkBlue-300);
+    --color-text-active: var(--white-1000);
+    --color-border-active: var(--white-500);
+    --color-background-disabled: var(--surface-darkBlue-350);
+    --color-text-disabled: var(--surface-darkBlue-200);
+    --color-border-disabled: var(--surface-darkBlue-250);
+    --color-text-label: var(--white-1000);
+    --color-text-summary: var(--white-500);
+    --color-graphic-background: var(--surface-darkBlue-350);
+    --color-graphic-background-hover: var(--surface-darkBlue-350);
+    --color-graphic-background-disabled: var(--surface-darkBlue-300);
+    --color-graphic-foreground: var(--surface-darkBlue-200);
+    --color-graphic-foreground-disabled: var(--surface-darkBlue-200);
+    --color-highlight: #3BAADF;
+    --color-accent: #3BAADF;
+    --font-weight-label: 300;
+    --color-input-background: var(--surface-darkBlue-250);
+}
+
+html {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: transparent;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--color-body);
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    box-sizing: border-box;
+    width: calc(100% - 20px);
+    margin: 5px 10px -5px 10px;
+}
+.content {
+    padding-bottom: 20px;
+    overflow-y: overlay;
+    height: calc(100vh - 50px);
+    padding-right: 15px;
+    margin-right: -15px;
+    box-sizing: border-box;
+}
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 42px;
+    background-color: var(--color-body);
+    border-top: 1px solid var(--color-border-default);
+    text-align: center;
+    margin: 0;
+    z-index: 1000;
+}
+.group {
+    background-color: transparent;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    border-radius: var(--rad-l);
+}
+.group p {
+    color: var(--color-text-default);
+}
+.placeholder {
+    flex: 1;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 4px;
+    align-items: center;
+}
+.button-group button {
+    flex: 1;
+}
+
+.button-row {
+    display: flex;
+    flex-direction: row;
+}
+
+button {
+    width: 100%;
+    padding: 5px 10px;
+    background-color: var(--color-background-default);
+    color: var(--color-text-default);
+    border: 1px solid var(--color-border-default);
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 12px;
+    border-radius: 0;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+button:not(:disabled):hover {
+    background-color: var(--color-background-hover);
+    color: var(--color-text-hover);
+    border: 1px solid var(--color-border-default);
+}
+button:not(:disabled):active {
+    background-color: var(--color-background-active);
+    color: var(--color-text-active);
+    border: 1px solid var(--color-border-active);
+}
+button:disabled {
+    background-color: var(--color-background-disabled);
+    color: var(--color-text-disabled);
+    cursor: not-allowed;
+    border: 1px solid var(--color-border-disabled);
+    opacity: 0.4;
+}
+
+#closeBtn {
+    margin-right: 8px;
+}
+
+#activateBtn,
+#deactivateBtn {
+    display: flex;
+    align-items: center;
+}
+
+.led {
+    width: 7.5px;
+    height: 7.5px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, var(--grey-400), var(--grey-600));
+    margin-right: 6px;
+    flex-shrink: 0;
+    box-shadow: inset 0 -1px 2px rgba(0,0,0,0.3);
+}
+
+.led.active {
+    background: radial-gradient(circle at 30% 30%, #b7e68a, #6a9728);
+    box-shadow: 
+        0 0 4px 1px rgba(135, 179, 64, 0.9),
+        0 0 8px 2px rgba(135, 179, 64, 0.5),
+        inset 0 -2px 3px rgba(0,0,0,0.2),
+        inset 0 2px 3px rgba(255,255,255,0.3);
+}
+
+.label-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 5px;
+}
+
+.label-row span:first-child {
+    color: var(--color-text-label);
+}
+
+.dark-mode .label-row span:first-child {
+    font-weight: var(--font-weight-label);
+}
+
+.config-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.config-row span:first-child {
+    flex: 1;
+    color: var(--color-text-label);
+}
+
+.help-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--color-graphic-background);
+    color: var(--color-text-summary);
+    font-size: 10px;
+    font-weight: bold;
+    cursor: help;
+    border: 1px solid var(--color-border-default);
+}
+
+.help-icon:hover {
+    background-color: var(--color-background-hover);
+    color: var(--color-text-default);
+}
+
+.telemetry-input {
+    width: 78px;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: transparent;
+    font-size: 14px;
+    color: var(--color-text-default);
+    border: none;
+    padding: 4px;
+    text-align: right;
+    font-family: 'Courier New', monospace;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.telemetry-input:read-only {
+    background-color: transparent;
+    cursor: default;
+    padding: 4px 0px;
+}
+
+.telemetry-input.editable {
+    width: 101px;
+    background-color: var(--color-input-background);
+    border: 1px solid var(--color-border-default);
+    cursor: text;
+    user-select: text;
+    -webkit-user-select: text;
+}
+
+.telemetry-input.editable:focus {
+    outline: 2px solid var(--color-highlight);
+    outline-offset: -1px;
+}
+
+.mode-select {
+    width: 101px;
+    padding: 4px 8px;
+    font-size: 12px;
+    font-family: inherit;
+    background-color: var(--color-input-background);
+    color: var(--color-text-default);
+    border: 1px solid var(--color-border-default);
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.mode-select:focus {
+    outline: 2px solid var(--color-highlight);
+    outline-offset: -1px;
+}
+
+.axis-label {
+    color: var(--color-text-default);
+    width: 35px;
+    text-align: right;
+    display: inline-block;
+}
