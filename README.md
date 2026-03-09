@@ -2,7 +2,9 @@
 
 ## Overview
 
-TrackpuckTools is a Fusion 360 add-in that connects HID-based 6DoF input peripheral devices (such as Trackpuck) to Fusion 360, providing fluid control over camera orbit, pan, zoom, and rotation.
+TrackpuckTools is a Fusion 360 add-in that connects HID-based 6DoF input peripheral devices (such as [Trackpuck](https://github.com/badjeff/trackpuck)) to Fusion 360, providing fluid control over camera orbit, pan, zoom, and rotation.
+
+https://github.com/user-attachments/assets/f231d02b-527b-4762-a200-921404486fa5
 
 ## Supported Devices
 
